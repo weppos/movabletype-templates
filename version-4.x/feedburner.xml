@@ -1,4 +1,27 @@
 <$mt:HTTPContentType type="application/atom+xml"$><?xml version="1.0" encoding="<$mt:PublishCharset$>"?>
+
+<!-- 
+
+  Movable Type 4.x FeedBurner Atom Template
+
+  This is a free template for Movable Type blogging platform.
+  This template creates a valid Atom feed to submit to FeedBurner.
+
+  For further information about FeedBurner visit http://www.feedburner.com/.
+
+  Please do not change or remove this section.
+
+  @category   MovableType
+  @package    MovableType-4.x
+  @author     Simone Carletti <weppos@weppos.net>
+  @copyright  2003-2008 The Authors
+  @license    
+  @version    
+  @link       http://www.simonecarletti.com/
+  @source     http://github.com/weppos/movabletype-templates/
+
+-->
+
 <feed 
   xmlns="http://www.w3.org/2005/Atom"
   xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
