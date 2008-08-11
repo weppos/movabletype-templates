@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- 
+  
+  Movable Type 3.3x Sitemap Template
+  
+  This is a free template for Movable Type blogging platform.
+  This template creates a valid Sitemap file for your blog.
+  
+  For further information about Sitemap protocol visit http://www.sitemap.org/.
+  
+  Please do not change or remove this section.
+  
+  @category   MovableType
+  @package    MovableType-3.3x
+  @author     Simone Carletti <weppos@weppos.net>
+  @copyright  2003-2008 The Authors
+  @license    
+  @version    
+  @link       http://www.simonecarletti.com/
+  @source     http://github.com/weppos/movabletype-templates/
+
+-->
+
+<!-- start homepage -->
+<url>
+  <loc><$MTBlogURL encode_xml="1"$></loc>
+  <priority>1.0</priority>
+  <changefreq>daily</changefreq>
+  <MTEntries lastn="1">
+  <lastmod><$MTEntryModifiedDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></lastmod>
+  </MTEntries>
+</url>
+<!-- end homepage -->
+
+<!-- top100 entries start-->
+<MTEntries lastn="100">
+<url>
+<loc><$MTEntryPermalink encode_xml="1"$></loc>
+<lastmod><MTIfNonZero tag="MTEntryCommentCount"><MTComments lastn="1"><$MTCommentDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></MTComments><MTElse><$MTEntryModifiedDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></MTElse></MTIfNonZero>
+</lastmod>
+</url>
+</MTEntries>
+<!-- top100 entries end -->
+
+<!-- entries start-->
+<MTEntries lastn="9999" offset="100">
+<url>
+<loc><$MTEntryPermalink encode_xml="1"$></loc>
+<lastmod><MTIfNonZero tag="MTEntryCommentCount"><MTComments lastn="1"><$MTCommentDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></MTComments><MTElse><$MTEntryModifiedDate utc="1" format="%Y-%m-%dT%H:%M:%SZ"$></MTElse></MTIfNonZero>
+</lastmod>
+</url>
+</MTEntries>
+<!-- entries end -->
+
+<!-- Monthly archive start -->
+<MTIfArchiveTypeEnabled archive_type="Monthly">
+<MTArchiveList archive_type="Monthly">
+<url>
+<loc><$MTArchiveLink$></loc>
+</url>
+</MTArchiveList>
+</MTIfArchiveTypeEnabled>
+<!-- Monthly archive end -->
+
+<!-- Category archive start -->
+<MTIfArchiveTypeEnabled archive_type="Category"><MTTopLevelCategories>
+<MTIfNonZero tag="MTCategoryCount">
+<url>
+<loc><$MTCategoryArchiveLink$></loc>
+</url>
+</MTIfNonZero>
+<MTSubCatsRecurse></MTTopLevelCategories></MTIfArchiveTypeEnabled>
+<!-- Category archive end -->
+
+</urlset>
