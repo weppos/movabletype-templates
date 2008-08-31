@@ -53,22 +53,23 @@
       
     <!-- start categories -->
     <mt:EntryCategories>
-        <category term="<$mt:CategoryLabel encode_xml="1"$>" scheme="http://www.sixapart.com/ns/types#category" />
+      <category term="<$mt:CategoryLabel encode_xml="1"$>" scheme="http://www.sixapart.com/ns/types#category" />
     </mt:EntryCategories>
     <!-- end categories -->
     
     <!-- start tags -->
-    <mt:EntryIfTagged><mt:EntryTags><category term="<$mt:TagName normalize="1" encode_xml="1"$>" label="<$mt:TagName encode_xml="1"$>" scheme="http://www.sixapart.com/ns/types#tag" />
-     </mt:EntryTags></mt:EntryIfTagged>
-     <!-- end tags -->
+    <mt:EntryIfTagged><mt:EntryTags>
+      <category term="<$mt:TagName normalize="1" encode_xml="1"$>" label="<$mt:TagName encode_xml="1"$>" scheme="http://www.sixapart.com/ns/types#tag" />
+    </mt:EntryTags></mt:EntryIfTagged>
+    <!-- end tags -->
+    
+    <content type="html" xml:lang="<$mt:BlogLanguage ietf="1"$>" xml:base="<$mt:BlogURL encode_xml="1"$>">
+      <$mt:EntryBody encode_xml="1"$>
+      <$mt:EntryMore encode_xml="1"$>
+    </content>
      
-     <content type="html" xml:lang="<$mt:BlogLanguage ietf="1"$>" xml:base="<$mt:BlogURL encode_xml="1"$>">
-       <$mt:EntryBody encode_xml="1"$>
-       <$mt:EntryMore encode_xml="1"$>
-     </content>
-     
-     <!-- slash namespace -->
-     <slash:comments><$mt:EntryCommentCount$></slash:comments>
+    <!-- slash namespace -->
+    <slash:comments><$mt:EntryCommentCount$></slash:comments>
      
   </entry>
   <!-- end entry <$mt:EntryID$> -->
