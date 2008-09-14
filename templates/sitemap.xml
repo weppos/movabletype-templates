@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+  
+  Movable Type 4.x Sitemap Template
+  
+  This is a free template for Movable Type blogging platform.
+  This template creates a valid Sitemap file for your blog.
+  
+  For further information about Sitemap protocol visit http://www.sitemap.org/.
+  
+  Please do not change or remove this section.
+  
+  @category   MovableType
+  @package    MovableType-4.x
+  @author     Simone Carletti <weppos@weppos.net>
+  @copyright  2003-2008 The Authors
+  @license    
+  @version    
+  @link       http://www.simonecarletti.com/
+  @source     http://github.com/weppos/movabletype-templates/
+  
+  
+  Missing:
+    
+    * add pages
+    * add feeds
+    * Yearly
+    * Weekly
+    * Daily
+    * Author-Yearly
+    * Author-Weekly
+    * Author-Daily
+    * Category-Yearly
+    * Category-Weekly
+    * Category-Daily
+    
+  TODO:
+
+    * import lastmod features frm 3.3x
+
+-->
+
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+<!-- start homepage -->
+<url>
+  <loc><$mt:BlogURL encode_xml="1"$></loc>
+  <changefreq>daily</changefreq>
+  <mt:Entries lastn="1">
+  <lastmod><$mt:EntryModifiedDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></lastmod>
+  </mt:Entries>
+  <priority>1.0</priority>
+</url>
+<!-- end homepage -->
+
+<mt:IfArchiveTypeEnabled archive_type="Individual">
+<mt:ArchiveList archive_type="Individual" lastn="99999">
+<url>
+  <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+  <lastmod><$mt:ArchiveDate format="%Y-%m-%dT%H:%M:%S"$><$mt:BlogTimezone$></lastmod>
+  <priority>0.8</priority>
+</url>
+</mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+
+<mt:IfArchiveTypeEnabled archive_type="Monthly" lastn="99999">
+<mt:ArchiveList archive_type="Monthly">
+<url>
+  <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+  <changefreq>monthly</changefreq>
+  <priority>0.5</priority>
+</url>
+</mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+
+<mt:IfArchiveTypeEnabled archive_type="Category" lastn="99999">
+<mt:ArchiveList archive_type="Category">
+<url>
+  <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+</mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+
+<mt:IfArchiveTypeEnabled archive_type="Author" lastn="99999">
+<mt:ArchiveList archive_type="Author">
+<url>
+  <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+</mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+
+<mt:IfArchiveTypeEnabled archive_type="Category-Monthly" lastn="99999">
+<mt:ArchiveList archive_type="Category-Monthly">
+<url>
+  <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+  </url>
+</mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+
+<mt:IfArchiveTypeEnabled archive_type="Author-Monthly" lastn="99999">
+<mt:ArchiveList archive_type="Author-Monthly">
+<url>
+  <loc><$mt:ArchiveLink encode_xml="1"$></loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.5</priority>
+</url>
+</mt:ArchiveList>
+</mt:IfArchiveTypeEnabled>
+
+<mt:Tags>
+<url>
+  <loc><$mt:TagSearchLink encode_xml="1"$></loc>
+  <changefreq>weekly</changefreq>
+  <priority>0.6</priority>
+</url>
+</mt:Tags>
+
+</urlset>
